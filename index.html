@@ -15,17 +15,20 @@
 				xmlHttp.open("GET", theUrl, true);
 				xmlHttp.send(null);
 			}
-			
-			httpGetAsync(
-				"https://api.github.com/users/ololx/repos", 
-				function(response) {
-					console.log(response);
+
+			function innerRepos(response) {
+				console.log(response);
 	
-					for(var k in response) {
-						console.log(k, response[k]);
-						document.body.innerHTML += `<a href="${response[k]["html_url"]}" target="_blank"><img width="25%" align="left" src="https://github-readme-stats.vercel.app/api/pin/?username=${response[k]["owner"]["login"]}&repo=${response[k]["name"]}&hide_border=true&bg_color=b3c6e4" alt="${response[k]["name"]}"/></a><br />`;
-					}
-				});
+				for(var k in response) {
+					console.log(k, response[k]);
+					if (response[k]["fork"]) continue;
+					
+					document.body.innerHTML += `<a href="${response[k]["html_url"]}" target="_blank"><img width="25%" align="left" src="https://github-readme-stats.vercel.app/api/pin/?username=${response[k]["owner"]["login"]}&repo=${response[k]["name"]}&hide_border=true&bg_color=b3c6e4" alt="${response[k]["name"]}"/></a><br />`;
+				}
+			}
+
+			httpGetAsync("https://api.github.com/users/ololx/repos", innerRepos);
+			httpGetAsync("https://api.github.com/users/innopolis-university-java-team/repos", innerRepos);
 		</script>
 	</head>
 	<body>
