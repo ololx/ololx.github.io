@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<link rel ="stylesheet" type ="text/css" href ="index.css">
+		<script>
+			function httpGetAsync(theUrl, callback) {
+				var xmlHttp = new XMLHttpRequest();
+				xmlHttp.onreadystatechange = function() { 
+				
+				if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+					callback(JSON.parse(xmlHttp.response));
+				}
+				
+				xmlHttp.open("GET", theUrl, true);
+				xmlHttp.send(null);
+			}
+			
+			httpGetAsync(
+				"https://api.github.com/users/ololx/repos", 
+				function(response) {
+					console.log(response);
+	
+					for(var k in response) {
+						console.log(k, response[k]);
+						document.body.innerHTML += `<a href="${response[k]["html_url"]}" target="_blank"><img width="25%" align="left" src="https://github-readme-stats.vercel.app/api/pin/?username=${response[k]["owner"]["login"]}&repo=${response[k]["name"]}&hide_border=true&bg_color=b3c6e4" alt="${response[k]["name"]}"/></a><br />`;
+					}
+				});
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>
