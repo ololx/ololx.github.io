@@ -17,13 +17,18 @@
 			}
 
 			function innerRepos(response) {
-				console.log(response);
-	
 				for(var k in response) {
 					console.log(k, response[k]);
 					if (response[k]["fork"]) continue;
 					
-					document.body.innerHTML += `<a href="${response[k]["html_url"]}" target="_blank"><img width="25%" align="left" src="https://github-readme-stats.vercel.app/api/pin/?username=${response[k]["owner"]["login"]}&repo=${response[k]["name"]}&hide_border=true&bg_color=b3c6e4" alt="${response[k]["name"]}"/></a><br />`;
+					document.body.innerHTML += `<div class = "pl"><ul><li>` 
+						+ `<a href="#" class="first" target="_blank">` 
+							+ `<img src="https://github-readme-stats.vercel.app/api/pin/?username=${response[k]["owner"]["login"]}&repo=${response[k]["name"]}&hide_border=true&bg_color=b3c6e4" alt="${response[k]["name"]}"/>` 
+							+ `</a>`
+						+ `<a class ="second" href ="${response[k]["html_url"]}">` 
+							+ `${response[k]["description"] == null ? "#" : response[k]["description"]}` 
+							+ `</a>` 
+						+ `</div></ul></li>`;
 				}
 			}
 
@@ -32,6 +37,5 @@
 		</script>
 	</head>
 	<body>
-		
 	</body>
 </html>
