@@ -10,7 +10,7 @@ You can also see my pet projects, which are made for fun or do not yet meet the 
 
 # Cranberry Project
 
-```java
+```
              ___/\\ /\  
             / _//| \ /  
            / / / |/ \__ 000   000
