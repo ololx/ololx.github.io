@@ -1,4 +1,4 @@
-![logo](https://github.com/ololx/ololx.github.io/blob/assets/ololx-logo.png?raw=true)
+![logo](https://github.com/ololx/ololx.github.io/blob/assets/ololx-logo-inverse.png?raw=true)
 
 # Welcome
 
