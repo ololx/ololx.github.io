@@ -1,4 +1,4 @@
-![ololx-repository-template](https://user-images.githubusercontent.com/57698089/147396972-ed081082-2792-496a-8c9b-ef75bcda7bc6.png)
+![logo](../assets/ololx-logo-inverse.png?raw=true)
 
 # Welcome
 
