@@ -6,7 +6,7 @@ remote_theme: pmarsceill/just-the-docs
 search_enabled: true
 
 # Site logo
-logo: "https://github.com/ololx/ololx.github.io/blob/assets/ololx-logo-inverse.png"
+#logo: "https://github.com/ololx/ololx.github.io/blob/assets/ololx-logo-inverse.png"
 
 # Aux links for the upper right navigation
 aux_links:
