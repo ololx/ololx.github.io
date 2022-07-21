@@ -18,6 +18,6 @@ The Cranberry is a java library that allows to write less code - it's  automatic
 
 The gif demonstraits how `cranberry` helps to write less code on the checking parameters implementation example for non-emptiness via usage of the `@ NotEmpty` annotation from the `cranberry-statement` module. This is one of opportunities which cranberry provides.
 
-![The demo of cranberry statement usage](https://github.com/ololx/cranberry/blob/cranberry-assets/demo/cranberry-statements-not-blank-demo-1.gif?raw=true)
+![The demo of cranberry statement usage](https://github.com/ololx/cranberry/blob/cranberry/demo/cranberry-statements-not-blank-demo-1.gif?raw=true)
 
 [More info](https://ololx.github.io/cranberry/)
