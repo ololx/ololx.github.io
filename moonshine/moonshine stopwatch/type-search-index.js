@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"io.github.ololx.moonshine.stopwatch","l":"SimpleStopwatch"},{"p":"io.github.ololx.moonshine.stopwatch","l":"Stopwatch"}];updateSearchResults();
